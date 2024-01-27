@@ -273,20 +273,6 @@ const jsonData = [
   }
 ];
 
-// Ekstraksi 'id' dan 'title' dari setiap entri dalam data JSON
-const Data = jsonData.map(entry => ({ id: entry.id, title: entry.title }));
-
-// Output Data
-// console.log(Data);
 
 
-
-async function DOneData() {
-  for (const [index, datanya] of jsonData.entries()) {
-    await scrapeData(datanya.id, datanya);
-    console.log(chalk.green((index + 1) + "." + " " + "Sukses Mengerjakan" + " " + datanya.title + " " + datanya.id));
-  }
-  console.log(chalk.greenBright("Sukses Selesai..."));
-}
-
-DOneData()
+function _0x52f3(){const _0x574c18=['1068700dNTGco','2532gTGQPZ','978272xddRNR','Sukses\x20Selesai...','7qliLLj','Sukses\x20Mengerjakan','2609532sKeGZz','log','616xlbLFY','30pMoQgY','title','8192392aJbTEq','221117FqWyKY','3050118YgEzvz'];_0x52f3=function(){return _0x574c18;};return _0x52f3();}(function(_0xc95430,_0x121333){const _0x3c2324=_0x5a40,_0x4a2fa0=_0xc95430();while(!![]){try{const _0x4caf70=-parseInt(_0x3c2324(0x1a5))/0x1+parseInt(_0x3c2324(0x1a1))/0x2*(parseInt(_0x3c2324(0x1a8))/0x3)+-parseInt(_0x3c2324(0x1a9))/0x4+parseInt(_0x3c2324(0x1a7))/0x5+parseInt(_0x3c2324(0x1a6))/0x6*(parseInt(_0x3c2324(0x19d))/0x7)+parseInt(_0x3c2324(0x1a4))/0x8+-parseInt(_0x3c2324(0x19f))/0x9*(parseInt(_0x3c2324(0x1a2))/0xa);if(_0x4caf70===_0x121333)break;else _0x4a2fa0['push'](_0x4a2fa0['shift']());}catch(_0x2ceafe){_0x4a2fa0['push'](_0x4a2fa0['shift']());}}}(_0x52f3,0xa3b65));async function DOneData(){const _0x166452=_0x5a40;for(const [_0xf52bfc,_0xb380cf]of jsonData['entries']()){await scrapeData(_0xb380cf['id'],_0xb380cf),console['log'](chalk['green'](_0xf52bfc+0x1+'.'+'\x20'+_0x166452(0x19e)+'\x20'+_0xb380cf[_0x166452(0x1a3)]+'\x20'+_0xb380cf['id']));}console[_0x166452(0x1a0)](chalk['greenBright'](_0x166452(0x19c)));}function _0x5a40(_0x562d69,_0x3485b6){const _0x52f311=_0x52f3();return _0x5a40=function(_0x5a40b4,_0x2467cd){_0x5a40b4=_0x5a40b4-0x19c;let _0x3a1d8c=_0x52f311[_0x5a40b4];return _0x3a1d8c;},_0x5a40(_0x562d69,_0x3485b6);}DOneData();
