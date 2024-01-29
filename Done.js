@@ -1,5 +1,85 @@
 import fetch from 'node-fetch';
-import { TokenBareer, API_KEY } from './Key.js';
 import chalk from 'chalk';
+import { Cookie, TokenBareer } from './Bearer_Token.js';
 
-function _0x32d0(_0x17dbbd,_0x90c7d9){const _0x55c4e1=_0x55c4();return _0x32d0=function(_0x32d04b,_0x2a78b5){_0x32d04b=_0x32d04b-0x14b;let _0x45f2e4=_0x55c4e1[_0x32d04b];return _0x45f2e4;},_0x32d0(_0x17dbbd,_0x90c7d9);}function _0x55c4(){const _0x37f912=['body','80sCfhuQ',':scheme:\x20https','4481432mJJXSk','Sec-Ch-Ua-Model:\x20\x22\x22','Gagal,\x20Mengulang...','Authorization:\x20','Accept-Language:\x20id','Sec-Fetch-Dest:\x20empty','Sec-Ch-Ua-Full-Version:\x20\x22120.0.6099.225\x22','2FLHzvy','61810uSeNuS','green','Sec-Ch-Ua-Arch:\x20\x22x86\x22','Baggage:\x20sentry-environment=production,sentry-release=Kf1S-EV7j5TurCCekrDU9,sentry-public_key=b02b510ca06d44bebb1cb1a546c79a56,sentry-trace_id=907f36b5a4c9413182782c9f9b0f55d6','User-Agent:\x20Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/120.0.0.0\x20Safari/537.36','includes','Origin:\x20https://whitelist.personajourney.io','https://whitelist.personajourney.io/api/quest.completeQuest?batch=1','info','73196UUkPpY','Sec-Ch-Ua-Platform-Version:\x20\x2215.0.0\x22','Sec-Fetch-Site:\x20same-origin','Accept-Encoding:\x20gzip,\x20deflate,\x20br','3890830zKtmdh','https://scrapeninja.p.rapidapi.com/scrape','POST','2962548btArEo','Content-Type:\x20application/json',':method:\x20POST','36YJBIPI','Cookie:\x20cf_clearance=0dL44c81FctwzE73XLp_1nr6ISQKYRTImu1YIbWIe5k-1706319576-1-AZiE4suME7M2i6jvLomo1LsSu0jsf8AK00bOxKDBbnZ3ZO8d31XNx/9IERenl3nrYUaLQYMBCP4tD0PS1DNQlH0=;\x20AMP_efc9a1cebd=JTdCJTIyZGV2aWNlSWQlMjIlM0ElMjI4MzM0NzM2MS03MjdlLTRhODktOTMwYi0zMzRhMTM0OWI5MWUlMjIlMkMlMjJ1c2VySWQlMjIlM0ElMjJteDRja2hTUXF2VHVNVjRkemlMQUxrcmVwRnQxJTIyJTJDJTIyc2Vzc2lvbklkJTIyJTNBMTcwNjMxOTU3OTIzOSUyQyUyMm9wdE91dCUyMiUzQWZhbHNlJTJDJTIybGFzdEV2ZW50VGltZSUyMiUzQTE3MDYzMTk2NTY3MzElMkMlMjJsYXN0RXZlbnRJZCUyMiUzQTIlN0Q=','application/json','18DjDtdu','red','json','\x22}}','log','{\x220\x22:{\x22json\x22:\x22','Sec-Ch-Ua-Platform:\x20\x22Windows\x22','statusCode',':authority:\x20whitelist.personajourney.io','error','Referer:\x20https://whitelist.personajourney.io/','30983744UjqaME','1622515klXeUo','Sec-Ch-Ua-Full-Version-List:\x20\x22Not_A\x20Brand\x22;v=\x228.0.0.0\x22,\x20\x22Chromium\x22;v=\x22120.0.6099.225\x22,\x20\x22Google\x20Chrome\x22;v=\x22120.0.6099.225\x22','Sentry-Trace:\x20907f36b5a4c9413182782c9f9b0f55d6-a70549493730239c-0'];_0x55c4=function(){return _0x37f912;};return _0x55c4();}(function(_0x5daf30,_0x588579){const _0x4502ed=_0x32d0,_0x48cdc1=_0x5daf30();while(!![]){try{const _0xfffe54=-parseInt(_0x4502ed(0x152))/0x1+-parseInt(_0x4502ed(0x15f))/0x2*(-parseInt(_0x4502ed(0x170))/0x3)+-parseInt(_0x4502ed(0x169))/0x4*(-parseInt(_0x4502ed(0x156))/0x5)+-parseInt(_0x4502ed(0x173))/0x6*(parseInt(_0x4502ed(0x160))/0x7)+-parseInt(_0x4502ed(0x158))/0x8*(parseInt(_0x4502ed(0x176))/0x9)+-parseInt(_0x4502ed(0x16d))/0xa+parseInt(_0x4502ed(0x151))/0xb;if(_0xfffe54===_0x588579)break;else _0x48cdc1['push'](_0x48cdc1['shift']());}catch(_0x36bf36){_0x48cdc1['push'](_0x48cdc1['shift']());}}}(_0x55c4,0xdeac4));export async function scrapeData(_0x53a990,_0x4cf2bf){const _0x51c3b0=_0x32d0,_0x4c280a=_0x51c3b0(0x16e),_0x27d0be={'url':_0x51c3b0(0x167),'method':_0x51c3b0(0x16f),'retryNum':0x1,'geo':'us','data':_0x51c3b0(0x14b)+_0x53a990+_0x51c3b0(0x179),'headers':[_0x51c3b0(0x14e),_0x51c3b0(0x172),':path:\x20/api/quest.completeQuest?batch=1',_0x51c3b0(0x157),'Accept:\x20/',_0x51c3b0(0x16c),_0x51c3b0(0x15c),_0x51c3b0(0x15b)+TokenBareer,_0x51c3b0(0x163),'Content-Length:\x2041',_0x51c3b0(0x171),_0x51c3b0(0x174),_0x51c3b0(0x166),_0x51c3b0(0x150),'Sec-Ch-Ua:\x20\x22Not_A\x20Brand\x22;v=\x228\x22,\x20\x22Chromium\x22;v=\x22120\x22,\x20\x22Google\x20Chrome\x22;v=\x22120\x22',_0x51c3b0(0x162),'Sec-Ch-Ua-Bitness:\x20\x2264\x22',_0x51c3b0(0x15e),_0x51c3b0(0x153),'Sec-Ch-Ua-Mobile:\x20?0',_0x51c3b0(0x159),_0x51c3b0(0x14c),_0x51c3b0(0x16a),_0x51c3b0(0x15d),'Sec-Fetch-Mode:\x20cors',_0x51c3b0(0x16b),_0x51c3b0(0x154),_0x51c3b0(0x164),'X-Kl-Ajax-Request:\x20Ajax_Request'],'extractor':'//\x20define\x20function\x20which\x20accepts\x20body\x20and\x20cheerio\x20as\x20args\x0afunction\x20extract(input,\x20cheerio)\x20{\x0a\x20\x20\x20\x20//\x20return\x20object\x20with\x20extracted\x20values\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20let\x20$\x20=\x20cheerio.load(input);\x0a\x20\x20\x0a\x20\x20\x20\x20let\x20items\x20=\x20[];\x0a\x20\x20\x20\x20$(\x27.titleline\x27).map(function()\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x09let\x20infoTr\x20=\x20$(this).closest(\x27tr\x27).next();\x0a\x20\x20\x20\x20\x20\x20\x09\x09let\x20commentsLink\x20=\x20infoTr.find(\x27a:contains(comments)\x27);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20items.push([\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20$(this).text(),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x09$(\x27a\x27,\x20this).attr(\x27href\x27),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x09infoTr.find(\x27.hnuser\x27).text(),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x09parseInt(infoTr.find(\x27.score\x27).text()),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x09infoTr.find(\x27.age\x27).attr(\x27title\x27),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x09parseInt(commentsLink.text()),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x09\x27https://news.ycombinator.com/\x27\x20+\x20commentsLink.attr(\x27href\x27),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x09new\x20Date()\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20]);\x0a\x20\x20\x20\x20\x20\x20\x20\x20});\x0a\x20\x20\x0a\x20\x20return\x20{\x20items\x20};\x0a}'},_0x573054={'method':_0x51c3b0(0x16f),'headers':{'content-type':_0x51c3b0(0x175),'X-RapidAPI-Key':API_KEY,'X-RapidAPI-Host':'scrapeninja.p.rapidapi.com'},'body':JSON['stringify'](_0x27d0be)};let _0x2b8c42=![];const _0x58baca=0xfa0;while(!_0x2b8c42){try{let _0x2ebada=await fetch(_0x4c280a,_0x573054),_0x3f57f4=await _0x2ebada[_0x51c3b0(0x178)]();if(_0x3f57f4[_0x51c3b0(0x168)]&&[0xc8,0x194][_0x51c3b0(0x165)](_0x3f57f4['info'][_0x51c3b0(0x14d)]))console[_0x51c3b0(0x17a)](chalk[_0x51c3b0(0x161)]('target\x20website\x20response\x20body:\x20',_0x3f57f4[_0x51c3b0(0x155)])),_0x2b8c42=!![];else throw new Error(JSON['stringify'](_0x3f57f4));}catch(_0x45cef4){console[_0x51c3b0(0x14f)](chalk[_0x51c3b0(0x177)](_0x45cef4)),console[_0x51c3b0(0x17a)](_0x51c3b0(0x15a)),await new Promise(_0x1910ab=>setTimeout(_0x1910ab,_0x58baca));}}}
+
+export async function scrapeData(Api_KEY, BareerToken) {
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    const url = 'https://scrapeninja.p.rapidapi.com/scrape';
+    const PAYLOAD = {
+        "url": "https://whitelist.personajourney.io/api/quest.completeQuest?batch=1",
+        "method": "POST",
+        "retryNum": 1,
+        "geo": "us",
+        "data": `{\"0\":{\"json\":\"65b3839b89817ef2c736109c\"}}`,
+        "headers": [
+            ":authority: whitelist.personajourney.io",
+            ":method: POST",
+            ":path: /api/quest.completeQuest?batch=1",
+            ":scheme: https",
+            "Accept: /",
+            "Accept-Encoding: gzip, deflate, br",
+            "Accept-Language: id",
+            `Authorization:` + " " + TokenBareer,
+            "Baggage: sentry-environment=production,sentry-release=Kf1S-EV7j5TurCCekrDU9,sentry-public_key=b02b510ca06d44bebb1cb1a546c79a56,sentry-trace_id=907f36b5a4c9413182782c9f9b0f55d6",
+            "Content-Length: 41",
+            "Content-Type: application/json",
+            `Cookie: ${Cookie}`  ,
+            "Origin: https://whitelist.personajourney.io",
+            "Referer: https://whitelist.personajourney.io/",
+            "Sec-Ch-Ua: \"Not_A Brand\";v=\"8\", \"Chromium\";v=\"120\", \"Google Chrome\";v=\"120\"",
+            "Sec-Ch-Ua-Arch: \"x86\"",
+            "Sec-Ch-Ua-Bitness: \"64\"",
+            "Sec-Ch-Ua-Full-Version: \"120.0.6099.225\"",
+            "Sec-Ch-Ua-Full-Version-List: \"Not_A Brand\";v=\"8.0.0.0\", \"Chromium\";v=\"120.0.6099.225\", \"Google Chrome\";v=\"120.0.6099.225\"",
+            "Sec-Ch-Ua-Mobile: ?0",
+            "Sec-Ch-Ua-Model: \"\"",
+            "Sec-Ch-Ua-Platform: \"Windows\"",
+            "Sec-Ch-Ua-Platform-Version: \"15.0.0\"",
+            "Sec-Fetch-Dest: empty",
+            "Sec-Fetch-Mode: cors",
+            "Sec-Fetch-Site: same-origin",
+            "Sentry-Trace: 907f36b5a4c9413182782c9f9b0f55d6-a70549493730239c-0",
+            "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "X-Kl-Ajax-Request: Ajax_Request"
+        ],
+        "extractor": "// define function which accepts body and cheerio as args\nfunction extract(input, cheerio) {\n    // return object with extracted values              \n    let $ = cheerio.load(input);\n  \n    let items = [];\n    $('.titleline').map(function() {\n          \tlet infoTr = $(this).closest('tr').next();\n      \t\tlet commentsLink = infoTr.find('a:contains(comments)');\n            items.push([\n                $(this).text(),\n              \t$('a', this).attr('href'),\n              \tinfoTr.find('.hnuser').text(),\n              \tparseInt(infoTr.find('.score').text()),\n              \tinfoTr.find('.age').attr('title'),\n              \tparseInt(commentsLink.text()),\n              \t'https://news.ycombinator.com/' + commentsLink.attr('href'),\n              \tnew Date()\n            ]);\n        });\n  \n  return { items };\n}"
+    };
+
+    const options = {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json',
+            // get your key on https://rapidapi.com/restyler/api/scrapeninja
+            'X-RapidAPI-Key': Api_KEY,
+            'X-RapidAPI-Host': 'scrapeninja.p.rapidapi.com'
+        },
+        body: JSON.stringify(PAYLOAD)
+    };
+
+    let success = false;
+    const delay = 4000;
+
+    while (!success) {
+        try {
+            let res = await fetch(url, options);
+            let resJson = await res.json();
+
+            // Check if the response is successful
+            if (resJson.info && [200, 404].includes(resJson.info.statusCode)) {
+                console.log(chalk.green('target website response status: ', resJson.info.statusCode));
+                console.log(chalk.green('target website response body: ', resJson.body));
+                success = true;
+            } else {
+                throw new Error(JSON.stringify(resJson));
+            }
+        } catch (e) {
+            console.error(chalk.red(e));
+            console.log(chalk.red`Gagal, retry...`);
+            await new Promise(resolve => setTimeout(resolve, delay));
+        }
+    }
+
+}
+
